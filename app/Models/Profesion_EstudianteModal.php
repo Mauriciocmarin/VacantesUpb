@@ -5,24 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class EstudianteModal extends Model
+class Profesion_EstudianteModal extends Model
 {
     use HasFactory;
-    protected $table = "TBL_ESTUDIANTE";
+    protected $table = "TBL_PROFESION_ESTUDIANTE";
     public $timestamps = true;
     protected $fillable =[
-        "id_UPB",
-        "nombre",
-        "apellido",
-        "correo",
-        "telefono",
-        "pais",
-        "ciudad",
-        "contrasena",
+        "ID_estudiante",
+        "ID_profesion",
+        "Numero_semestres",
         "borrado",
         "created_at",
         "updated_at"
     ];
-    protected $hidden =["contrasena"];
-    
 }

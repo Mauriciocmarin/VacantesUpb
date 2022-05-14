@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\EstudianteController;
+use App\Http\Controllers\Profesion_EstudianteController;
 use App\Models\EstudianteModal;
+use App\Models\Profesion_EstudianteModal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +27,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route :: apiResource("empresas",EmpresaController::class);
 Route :: get("pagina_empresa",[EmpresaController::class,"paginado"]);
 Route :: apiResource("estudiantes",EstudianteController::class);
+Route :: apiResource("ProfesionEstudiantes",Profesion_EstudianteController::class);
